@@ -1,0 +1,55 @@
+prototype(Sfi.Styleguide:Category)>
+prototype(Sfi.Styleguide:Category) < prototype(TYPO3.Neos:Page) {
+
+	head {
+		stylesheets.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Sfi.Styleguide/Private/Templates/Category.html'
+			sectionName = 'stylesheets'
+		}
+		javascripts.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Sfi.Styleguide/Private/Templates/Category.html'
+			sectionName = 'headScripts'
+		}
+	}
+	body {
+		templatePath = 'resource://Sfi.Styleguide/Private/Templates/Category.html'
+		sectionName = 'body'
+
+		title = ${node.properties.title}
+
+		menu = Menu
+		menu{
+			 entryLevel = 2
+		}
+		content {
+			main = ContentCollection {
+				nodePath = 'main'
+			}
+		}
+
+		javascripts.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Sfi.Styleguide/Private/Templates/Category.html'
+			sectionName = 'bodyScripts'
+		}
+	}
+
+	
+}
+
+root.styleguide {
+        condition = ${q(node).is('[instanceof Sfi.Styleguide:Category]')}
+        renderPath = '/styleguide'
+}
+
+styleguide = Sfi.Styleguide:Category
+
+
+
+
+prototype(Sfi.Styleguide:SubCategory){
+	content = Sfi.Widgets:ContentCollection
+}
+
+prototype(Sfi.Styleguide:Item){
+	content = Sfi.Widgets:ContentCollection
+}

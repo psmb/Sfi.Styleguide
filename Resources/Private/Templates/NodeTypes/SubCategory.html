@@ -1,0 +1,16 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<div class="SubCategory">
+	<div class="row">
+		<div class="column">
+			<div class="SubCategory-Title">
+				{neos:contentElement.editable(property: 'title')}		
+			</div>
+			<div class="SubCategory-Description">
+				{neos:contentElement.editable(property: 'description')}		
+			</div>
+			<div class="SubCategory-Content">
+				{content -> f:format.raw()}
+			</div>
+		</div>
+	</div>		
+</div>

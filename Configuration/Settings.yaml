@@ -1,0 +1,10 @@
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+        'Sfi.Styleguide': TRUE
+    nodeTypes:
+      groups:
+        styleguide:
+          position: 900
+          label: 'Styleguide'
