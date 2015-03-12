@@ -82,3 +82,6 @@
         label: 'Desktop design ready?'
         inspector:
           group: status
+  constraints:
+    nodeTypes:
+      '*': true
