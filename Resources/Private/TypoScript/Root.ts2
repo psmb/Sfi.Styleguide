@@ -1,16 +1,5 @@
 prototype(Sfi.Styleguide:Category)>
-prototype(Sfi.Styleguide:Category) < prototype(TYPO3.Neos:Page) {
-
-	head {
-		stylesheets.site = TYPO3.TypoScript:Template {
-			templatePath = 'resource://Sfi.Styleguide/Private/Templates/Category.html'
-			sectionName = 'stylesheets'
-		}
-		javascripts.site = TYPO3.TypoScript:Template {
-			templatePath = 'resource://Sfi.Styleguide/Private/Templates/Category.html'
-			sectionName = 'headScripts'
-		}
-	}
+prototype(Sfi.Styleguide:Category) < prototype(Sfi.Sfi:Page) {
 	body {
 		templatePath = 'resource://Sfi.Styleguide/Private/Templates/Category.html'
 		sectionName = 'body'
@@ -26,14 +15,7 @@ prototype(Sfi.Styleguide:Category) < prototype(TYPO3.Neos:Page) {
 				nodePath = 'main'
 			}
 		}
-
-		javascripts.site = TYPO3.TypoScript:Template {
-			templatePath = 'resource://Sfi.Styleguide/Private/Templates/Category.html'
-			sectionName = 'bodyScripts'
-		}
 	}
-
-	
 }
 
 root.styleguide {
@@ -42,9 +24,6 @@ root.styleguide {
 }
 
 styleguide = Sfi.Styleguide:Category
-
-
-
 
 prototype(Sfi.Styleguide:SubCategory){
 	content = TYPO3.Neos:ContentCollectionRenderer
