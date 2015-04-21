@@ -2,12 +2,14 @@
 <div class="SubCategory">
 	<div class="row">
 		<div class="column">
-			<div class="SubCategory-Title">
-				{neos:contentElement.editable(property: 'title')}		
-			</div>
-			<div class="SubCategory-Description">
-				{neos:contentElement.editable(property: 'description')}		
-			</div>
+			<neos:contentElement.wrap node="{node}">
+				<div class="SubCategory-Title">
+					{neos:contentElement.editable(property: 'title')}		
+				</div>
+				<div class="SubCategory-Description">
+					{neos:contentElement.editable(property: 'description')}		
+				</div>
+			</neos:contentElement.wrap>
 			<div class="SubCategory-Content">
 				{content -> f:format.raw()}
 			</div>

@@ -1,7 +1,7 @@
 
 'Sfi.Styleguide:Category':
   superTypes:
-    - 'TYPO3.Neos.NodeTypes:Page'
+    - 'TYPO3.Neos:Document'
   ui:
     label: 'Styleguide Category'
     icon: icon-book
@@ -13,7 +13,7 @@
 
 'Sfi.Styleguide:SubCategory':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    - 'TYPO3.Neos:Document'
   ui:
     label: 'Styleguide SubCategory'
     icon: icon-book
@@ -36,7 +36,7 @@
 
 'Sfi.Styleguide:Item':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    - 'TYPO3.Neos:Document'
   ui:
     label: 'Styleguide Item'
     icon: 'icon-edit'
@@ -47,6 +47,9 @@
         status:
           label: 'Development status'
           position: 5
+  childNodes:
+    main:
+      type: 'TYPO3.Neos:ContentCollection'
   properties:
     title:
       type: string

@@ -2,12 +2,14 @@
 <div class="StyleguideItem">
 	<div class="row">
 		<div class="large-4 column">
-			<div class="StyleguideItem-Title">
-				{neos:contentElement.editable(property: 'title')}		
-			</div>
-			<div class="StyleguideItem-Description">
-				{neos:contentElement.editable(property: 'description')}		
-			</div>
+			<neos:contentElement.wrap node="{node}">
+				<div class="StyleguideItem-Title">
+					<neos:link.node node="{node}">{neos:contentElement.editable(property: 'title')}</neos:link.node>
+				</div>
+				<div class="StyleguideItem-Description">
+					{neos:contentElement.editable(property: 'description')}
+				</div>
+			</neos:contentElement.wrap>
 			<f:if condition="{statusTrack}">
 			    <dl>
 					<dt>Development ready?</dt>
@@ -24,5 +26,5 @@
 				{content -> f:format.raw()}
 			</div>
 		</div>
-	</div>		
+	</div>
 </div>
