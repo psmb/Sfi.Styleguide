@@ -4,7 +4,7 @@
 		<div class="column">
 			<neos:contentElement.wrap node="{node}">
 				<div class="SubCategory-Title">
-					{neos:contentElement.editable(property: 'title')}		
+					<neos:link.node node="{node}">{neos:contentElement.editable(property: 'title')}</neos:link.node>	
 				</div>
 				<div class="SubCategory-Description">
 					{neos:contentElement.editable(property: 'description')}		
