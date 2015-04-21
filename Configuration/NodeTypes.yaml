@@ -33,6 +33,7 @@
     nodeTypes:
       '*': false
       'Sfi.Styleguide:Item': true
+      'TYPO3.Neos:Shortcut': true
 
 'Sfi.Styleguide:Item':
   superTypes:
