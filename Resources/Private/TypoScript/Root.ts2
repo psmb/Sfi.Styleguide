@@ -31,6 +31,12 @@ prototype(Sfi.Styleguide:StyleguidePage) {
 	}
 }
 
+prototype(Sfi.Styleguide:StyleguidePageItem) < prototype(Sfi.Styleguide:StyleguidePage) {
+	body {
+		templatePath = 'resource://Sfi.Styleguide/Private/Templates/NodeTypes/Blank.html'
+	}
+}
+
 prototype(Sfi.Styleguide:SubCategory) {
 	content = TYPO3.Neos:ContentCollectionRenderer
 }
@@ -50,5 +56,5 @@ root.styleguide2 {
 }
 root.styleguide3 {
 	condition = ${q(node).is('[instanceof Sfi.Styleguide:Item]')}
-	type = 'Sfi.Styleguide:StyleguidePage'
+	type = 'Sfi.Styleguide:StyleguidePageItem'
 }
