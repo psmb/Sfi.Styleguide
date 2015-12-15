@@ -41,7 +41,7 @@ prototype(Sfi.Styleguide:SubCategory) {
 	content = TYPO3.Neos:ContentCollectionRenderer
 }
 
-prototype(Sfi.Styleguide:Item){
+prototype(Sfi.Styleguide:Item) {
 	content = TYPO3.Neos:ContentCollectionRenderer
 }
 
