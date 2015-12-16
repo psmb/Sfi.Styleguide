@@ -1,7 +1,7 @@
 
 'Sfi.Styleguide:Category':
   superTypes:
-    - 'TYPO3.Neos:Document'
+    'TYPO3.Neos:Document': true
   ui:
     label: 'Styleguide Category'
     icon: icon-book
@@ -10,10 +10,9 @@
     nodeTypes:
       '*': false
       'Sfi.Styleguide:SubCategory': true
-
 'Sfi.Styleguide:SubCategory':
   superTypes:
-    - 'TYPO3.Neos:Document'
+    'TYPO3.Neos:Document': true
   ui:
     label: 'Styleguide SubCategory'
     icon: icon-book
@@ -23,24 +22,23 @@
       type: string
       defaultValue: '<h2>Sub Category title</h2>'
       ui:
-        inlineEditable: TRUE
+        inlineEditable: true
     description:
       type: string
       defaultValue: '<p>Sub Category description</p>'
       ui:
-        inlineEditable: TRUE
+        inlineEditable: true
   constraints:
     nodeTypes:
       '*': false
       'Sfi.Styleguide:Item': true
       'TYPO3.Neos:Shortcut': true
-
 'Sfi.Styleguide:Item':
   superTypes:
-    - 'TYPO3.Neos:Document'
+    'TYPO3.Neos:Document': true
   ui:
     label: 'Styleguide Item'
-    icon: 'icon-edit'
+    icon: icon-edit
     group: styleguide
     inlineEditable: true
     inspector:
@@ -56,12 +54,12 @@
       type: string
       defaultValue: '<h3>Item title</h3>'
       ui:
-        inlineEditable: TRUE
+        inlineEditable: true
     description:
       type: string
       defaultValue: '<p></p>'
       ui:
-        inlineEditable: TRUE
+        inlineEditable: true
     statusTrack:
       type: boolean
       ui:
