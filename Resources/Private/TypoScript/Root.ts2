@@ -16,7 +16,7 @@ prototype(Sfi.Styleguide:StyleguidePage) {
 			 maximumLevels = 2
 		}
 
-		content = TYPO3.Neos:ContentCollectionRenderer
+		content = Neos.Neos:ContentCollectionRenderer
 	}
 	@cache {
 		mode = 'cached'
@@ -38,11 +38,11 @@ prototype(Sfi.Styleguide:StyleguidePageItem) < prototype(Sfi.Styleguide:Stylegui
 }
 
 prototype(Sfi.Styleguide:SubCategory) {
-	content = TYPO3.Neos:ContentCollectionRenderer
+	content = Neos.Neos:ContentCollectionRenderer
 }
 
 prototype(Sfi.Styleguide:Item) {
-	content = TYPO3.Neos:ContentCollectionRenderer
+	content = Neos.Neos:ContentCollectionRenderer
 }
 
 
