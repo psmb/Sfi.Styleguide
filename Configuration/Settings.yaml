@@ -1,10 +1,11 @@
-TYPO3:
+
+Neos:
   Neos:
     typoScript:
       autoInclude:
-        'Sfi.Styleguide': TRUE
+        Sfi.Styleguide: true
     nodeTypes:
       groups:
         styleguide:
           position: 900
-          label: 'Styleguide'
+          label: Styleguide

@@ -1,7 +1,7 @@
 
 'Sfi.Styleguide:Category':
   superTypes:
-    'TYPO3.Neos:Document': true
+    'Neos.Neos:Document': true
   ui:
     label: 'Styleguide Category'
     icon: icon-book
@@ -12,7 +12,7 @@
       'Sfi.Styleguide:SubCategory': true
 'Sfi.Styleguide:SubCategory':
   superTypes:
-    'TYPO3.Neos:Document': true
+    'Neos.Neos:Document': true
   ui:
     label: 'Styleguide SubCategory'
     icon: icon-book
@@ -32,10 +32,10 @@
     nodeTypes:
       '*': false
       'Sfi.Styleguide:Item': true
-      'TYPO3.Neos:Shortcut': true
+      'Neos.Neos:Shortcut': true
 'Sfi.Styleguide:Item':
   superTypes:
-    'TYPO3.Neos:Document': true
+    'Neos.Neos:Document': true
   ui:
     label: 'Styleguide Item'
     icon: icon-edit
@@ -48,7 +48,7 @@
           position: 5
   childNodes:
     main:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
   properties:
     title:
       type: string
